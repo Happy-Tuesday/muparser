@@ -5,3 +5,4 @@ ipch
 *.VC.db
 .vs
 lib
+*.opendb

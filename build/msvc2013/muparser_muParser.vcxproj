@@ -553,6 +553,15 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalDependencies>combase.lib;kernelx.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;_USRDLL;DLL_EXPORTS;MUPARSER_DLL;MUPARSERLIB_EXPORTS;_CRT_SECURE_NO_WARNINGS;MUP_USE_OPENMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;_USRDLL;DLL_EXPORTS;MUPARSER_DLL;MUPARSERLIB_EXPORTS;_CRT_SECURE_NO_WARNINGS;MUP_USE_OPENMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\muParser.cpp" />
